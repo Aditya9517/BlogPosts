@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="submit_javascript.js"></script>
+<head>
+	<meta charset="character_set">
+	<title>Blog Post</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form id="frm" class="contact100-form validate-form" method = "Post"> 
+				<span class="contact100-form-title">
+					Post your blog!
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your Name">
+					<span class="label-input100">FULL NAME *</span>
+					<input class="input100" type="text" id="name" name="name" placeholder="Enter Your Name">
+				</div>
+
+				<div class="wrap-input100 validate-input bg1 rs1-wrap-input100" data-validate = "Enter Your Email (e@a.x)">
+					<span class="label-input100">Email *</span>
+					<input class="input100" type="text" id="email" name="email" placeholder="Enter Your Email">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Subject *</span>
+					<input class="input100" type="text" id="subject" name="subject" placeholder="Enter The Subject">
+				</div>
+
+
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+					<span class="label-input100">Post *</span>
+					<textarea class="input100" name="description"  id="description" placeholder="Your description here..."></textarea>
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button onclick = "submit_by_id()" id="submit" type="button" class="contact100-form-btn">
+						<span>
+							Submit
+						</span>
+					</button>
+				</div>
+				<div class="container-contact103-form-btn">
+					<button type="submit" formaction="deletepost.html" type="button" class="contact103-form-btn">
+					Delete Blogs
+					</button>
+				</div>
+				<div class="container-contact102-form-btn">
+					<button type="submit" formaction="updatepost.html" type="button" class="contact102-form-btn">
+					Update Blogs
+					</button>
+				</div>
+				<div class="container-contact101-form-btn">
+					<button type="submit" formaction="viewblogs.html" type="button" class="contact101-form-btn">
+					View Blogs
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
