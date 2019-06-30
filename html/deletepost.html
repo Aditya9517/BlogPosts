@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="delete.js"></script>
+<head>
+	<meta charset="character_set">
+	<title>Blog Post</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form id="frm" class="contact100-form validate-form" method = "Post"> 
+				<span class="contact100-form-title">
+					Delete your blog post!
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your uid">
+					<span class="label-input100">UID *</span>
+					<input class="input100" type="text" id="uid_post" name="uid_post" placeholder="Enter the uid of blog post">
+				</div>
+
+				<div class="container-contact100-form-btn">
+					<button onclick = "delete_post()" id="submit" type="button" class="contact100-form-btn">
+					Delete Blog
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>

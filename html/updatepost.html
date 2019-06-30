@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="update.js"></script>
+<head>
+	<meta charset="character_set">
+	<title>Blog Post</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form id="frm" class="contact100-form validate-form" method = "Post"> 
+				<span class="contact100-form-title">
+					Update your blog post!
+				</span>
+
+				<div class="wrap-input100 validate-input bg1" data-validate="Please Type Your uid">
+					<span class="label-input100">UID *</span>
+					<input class="input100" type="text" id="uid_post" name="uid_post" placeholder="Enter the uid of blog post">
+				</div>
+
+				<div class="wrap-input100 bg1 rs1-wrap-input100">
+					<span class="label-input100">Subject *</span>
+					<input class="input100" type="text" id="subject" name="subject" placeholder="Enter The Subject">
+				</div>
+
+
+				<div class="wrap-input100 validate-input bg0 rs1-alert-validate" data-validate = "Please Type Your Message">
+					<span class="label-input100">Post *</span>
+					<textarea class="input100" name="description"  id="description" placeholder="Your description here..."></textarea>
+				</div>
+
+
+				<div class="container-contact100-form-btn">
+					<button onclick = "update_post()" id="submit" type="button" class="contact100-form-btn">
+					Update Blog
+					</button>
+				</div>
+		
+			</form>
+		</div>
+	</div>
+</body>
+</html>

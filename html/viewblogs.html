@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<script src="update_view.js"></script>
+<head>
+  <link rel="stylesheet" type="text/css" href="css/button.css">
+</head>
+<body>
+	<!-- javascript to display all the blog posts from couchDB-->
+	<script type="text/javascript">
+	const url = "http://127.0.0.1:5984/blogposts/_all_docs?include_docs=true"
+	fetch(url)
+  	.then(function(response) {
+    return response.json();
+  	})
+  	.then(function(jsonResponse) {
+      var views = ['_design/view1', '_design/view2', '_design/view3', '_design/view4', '_design/view5']
+    // do something with jsonResponse
+    // document.write(JSON.stringify(jsonResponse))
+      for(var i = 0; i < jsonResponse['rows'].length; i++) {
+        if(!(views.includes(jsonResponse['rows'][i]['id']))) {
+        	document.write("<h1 style='color:brown'>",jsonResponse['rows'][i]['doc']['subject'],"</h1>")
+        	document.write("<font size = '4' style='color:blue'>",jsonResponse['rows'][i]['doc']['name'],"</font>")
+        	document.write("<br> <font size = '3' style='color:blue'>",jsonResponse['rows'][i]['doc']['email'],"</font>")
+        	document.write("<br><body><description>",jsonResponse['rows'][i]['doc']['description'],"</description></body>")
+        	document.write("<br><img src='images/green_up.png' style='width:15px;height:15px;' onclick='update_upvotes(\"" + jsonResponse['rows'][i]['doc']['_id'] + "\")'>", " ", 
+            jsonResponse['rows'][i]['doc']['upvote'])
+          //document.write("<br><br><input type='button' class='w3-button w3-black' value=>")
+        	document.write("<br><img src='images/red_down.png' style='width:15px;height:15px;' onclick='update_downvotes(\"" + jsonResponse['rows'][i]['doc']['_id'] + "\")'>", " ",jsonResponse['rows'][i]['doc']['downvote'])
+          document.write("<br><br><br>")
+        }
+      }
+  	})
+  </script>
+</body>
+</html>
