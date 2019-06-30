@@ -1,2 +1,2 @@
 # BlogPosts
-# Required: CouchDB 
+Required: CouchDB 
